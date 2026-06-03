@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* --- Dynamic Parallax Scroll and Aesthetic Entry Animation Rules --- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Hidden Transition States as defined in original user configuration options (renamed to prevent collision with Tailwind CSS) */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal-hidden-simple {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-out;
+}
+
+.reveal-hidden-slide {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+/* Visible Toggled State applying dynamic springs */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) translateX(0) !important;
+}
+
+/* Custom Parallax Hero container standard definitions */
+.hero {
+    transition: transform 0.1s cubic-bezier(0.1, 0.8, 0.2, 1.0);
+    will-change: transform;
+}
+

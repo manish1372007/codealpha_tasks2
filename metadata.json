@@ -1,0 +1,6 @@
+{
+  "name": "FAQ Chatbot & Knowledge Management",
+  "description": "Enterprise AI chatbot with Semantic Search, Intent mapping, continuous learning systems, multi-lingual TTS voice assistant, analytics, and admin dashboard.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
